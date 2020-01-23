@@ -21,7 +21,7 @@ namespace :docker do
     if /\Amaster(?::([\da-f]+))?\z/ =~ ruby_version
       commit_hash = Regexp.last_match[1] || get_ruby_master_head_hash
       ruby_version = "master:#{commit_hash}"
-      tags = ["ruby2_keywords-by-default-master", "master-#{commit_hash}"]
+      tags = ["ruby2_keywords-by-default-2.7", "master-#{commit_hash}"]
     else
       tags = ["#{ruby_ver2}", "#{ruby_version}"]
     end
