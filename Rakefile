@@ -1,6 +1,6 @@
 namespace :docker do
   def docker_hub_org
-    "rubylang"
+    "eregon"
   end
 
   def docker_image_name
@@ -12,6 +12,7 @@ namespace :docker do
   end
 
   def get_ruby_master_head_hash
+    raise
     `curl -H 'accept: application/vnd.github.v3.sha' https://api.github.com/repos/ruby/ruby/commits/master`.chomp
   end
 
